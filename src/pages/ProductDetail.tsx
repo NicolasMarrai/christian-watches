@@ -1,4 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Star, ShoppingBag, Heart, Share2, Shield, Truck, RotateCcw } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
@@ -19,6 +20,11 @@ const ProductDetailPage = () => {
   const { addToCart } = useCart();
   const { isAuthenticated } = useAuth();
   const { toast } = useToast();
+
+  // Garante que ao entrar na página, a rolagem vá para o topo
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
 
   const product = products.find((p) => p.id === id);
   const relatedProducts = products.filter((p) => p.id !== id && p.category === product?.category).slice(0, 4);

@@ -24,6 +24,31 @@ export interface Product {
 
 export const products: Product[] = [
   {
+    id: '100',
+    name: 'Christian Modern White',
+    brand: 'Christian Watches',
+    price: 2999.00,
+    originalPrice: 3599.00,
+    category: 'masculino',
+    size: '42mm',
+    rating: 4.0,
+    reviews: 127,
+    images: [
+      '/public/christian.jpeg'
+    ],
+    description: 'Design minimalista, pulseira branca e mostrador moderno. Ideal para quem busca elegância e versatilidade no dia a dia.',
+    specs: {
+      material: 'Aço Inoxidável e Silicone',
+      movement: 'Quartzo Japonês',
+      waterResistance: '50m',
+      caseDiameter: '42mm',
+      warranty: '2 anos',
+    },
+    inStock: true,
+    soldCount: 58,
+    isNew: true,
+  },
+  {
     id: '1',
     name: 'Royal Chronograph Elite',
     brand: 'Christian Watches',
