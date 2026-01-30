@@ -34,7 +34,7 @@ export const products: Product[] = [
     rating: 4.0,
     reviews: 127,
     images: [
-      '/public/christian.jpeg'
+      '/christian.jpeg'
     ],
     description: 'Design minimalista, pulseira branca e mostrador moderno. Ideal para quem busca elegância e versatilidade no dia a dia.',
     specs: {
